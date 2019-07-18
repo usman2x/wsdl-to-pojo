@@ -30,7 +30,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <wsdlDirectory>D:\Cloud Technologies\Projects\Learning\Java\helloworld\src\main\resources</wsdlDirectory>
+                    <wsdlDirectory>D:\Projects\Learning\Java\helloworld\src\main\resources</wsdlDirectory>
                     <wsdlFiles>
                         <wsdlFile>A1.wsdl</wsdlFile>
                         <wsdlFile>A2.wsdl</wsdlFile>
