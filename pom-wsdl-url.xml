@@ -44,10 +44,10 @@
                 <configuration>
                     <wsdlUrls>
                         <wsdlUrl>
-                            https://test3.catalinacardservices.com/ccs_prepaid_clear_ws-test/op/ccs_prepaid_clear_ws.wsdl
+                            https://example.com/myWsdl.wsdl
                         </wsdlUrl>
                     </wsdlUrls>
-                    <packageName>com.ccs.service.client</packageName>
+                    <packageName>com.example.client.wsdl</packageName>
                     <sourceDestDir>src\main\java</sourceDestDir>
                 </configuration>
             </plugin>
