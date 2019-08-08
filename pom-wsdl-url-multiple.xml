@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.usman.sample</groupId>
+    <artifactId>source-gen</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>2.3.0</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+
+                    <execution>
+                        <id>wsimport-clear</id>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDestDir>src\main\java</sourceDestDir>
+                            <packageName>com.ws.1</packageName>
+                            <wsdlUrls>
+                                <wsdlUrl>
+                                    https://samle1.wsdl
+                                </wsdlUrl>
+                            </wsdlUrls>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>wsimport-ideology</id>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDestDir>src\main\java</sourceDestDir>
+                            <packageName>sample2.ws</packageName>
+                            <wsdlUrls>
+                                <wsdlUrl>
+                                    https://samle2.wsdl
+                                </wsdlUrl>
+                            </wsdlUrls>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+        </plugins>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+</project>
